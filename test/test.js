@@ -40,7 +40,7 @@ tape( 'feature detection result is a boolean', function test( t ) {
 
 tape( 'if `async`/`await` is supported, detection result is `true`', function test( t ) {
 	var detect = proxyquire( './../lib/main.js', {
-		'@stdlib/utils/eval': stub
+		'@stdlib/utils-eval': stub
 	});
 
 	t.strictEqual( detect(), true, 'detection result is `true`' );
@@ -53,7 +53,7 @@ tape( 'if `async`/`await` is supported, detection result is `true`', function te
 
 tape( 'if `async`/`await` is not supported, detection result is `false`', function test( t ) {
 	var detect = proxyquire( './../lib/main.js', {
-		'@stdlib/utils/eval': stub
+		'@stdlib/utils-eval': stub
 	});
 
 	t.strictEqual( detect(), false, 'detection result is `false`' );
