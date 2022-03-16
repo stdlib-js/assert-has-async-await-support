@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/assert-has-async-await-support",
-  "version": "0.0.8",
+  "version": "0.0.0",
   "description": "Detect native async/await support.",
   "license": "Apache-2.0",
   "author": {
