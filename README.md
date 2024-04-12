@@ -35,38 +35,33 @@ limitations under the License.
 
 > Detect native [`async`][mdn-async]/[`await`][mdn-await] support.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/assert-has-async-await-support
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-hasAsyncAwaitSupport = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-async-await-support@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var hasAsyncAwaitSupport = require( 'path/to/vendor/umd/assert-has-async-await-support/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-async-await-support@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.hasAsyncAwaitSupport;
-})();
-</script>
+var hasAsyncAwaitSupport = require( '@stdlib/assert-has-async-await-support' );
 ```
 
 #### hasAsyncAwaitSupport()
@@ -98,13 +93,8 @@ var bool = hasAsyncAwaitSupport();
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-async-await-support@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var hasAsyncAwaitSupport = require( '@stdlib/assert-has-async-await-support' );
 
 var bool = hasAsyncAwaitSupport();
 if ( bool ) {
@@ -112,18 +102,65 @@ if ( bool ) {
 } else {
     console.log( 'Environment lacks native async/await support.' );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/assert-has-async-await-support-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: has-async-await-support [options]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ has-async-await-support
+<boolean>
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
